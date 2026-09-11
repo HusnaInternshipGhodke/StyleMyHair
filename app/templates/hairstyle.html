@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleMyHair - Hairstyles</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/hairstyle.css') }}">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="main-header">
+
+    <div class="logo">
+        STYLEMYHAIR
+    </div>
+
+    <div class="header-subtitle">
+        Hairstyle Discovery
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+    <!-- PAGE TITLE -->
+
+    <section class="hero">
+
+        <h1>Find Your Perfect Hairstyle</h1>
+
+        <p>
+            Tell us about your hair and discover hairstyles
+            that suit you.
+        </p>
+
+    </section>
+
+
+    <!-- ================= PERSONALIZATION ================= -->
+
+    <section class="personalization">
+
+        <h2>Personalize Your Recommendations</h2>
+
+        <p class="section-text">
+            Select your preferences and we'll recommend suitable hairstyles.
+        </p>
+
+
+        <div class="preference-grid">
+
+            <!-- FACE SHAPE -->
+
+            <div class="form-group">
+
+                <label for="faceShape">
+                    Face Shape
+                </label>
+
+                <select id="faceShape">
+
+                    <option value="">
+                        Select face shape
+                    </option>
+
+                    <option value="oval">
+                        Oval
+                    </option>
+
+                    <option value="round">
+                        Round
+                    </option>
+
+                    <option value="square">
+                        Square
+                    </option>
+
+                    <option value="heart">
+                        Heart
+                    </option>
+
+                    <option value="diamond">
+                        Diamond
+                    </option>
+
+                    <option value="oblong">
+                        Oblong
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- HAIR TYPE -->
+
+            <div class="form-group">
+
+                <label for="hairType">
+                    Hair Type
+                </label>
+
+                <select id="hairType">
+
+                    <option value="">
+                        Select hair type
+                    </option>
+
+                    <option value="straight">
+                        Straight
+                    </option>
+
+                    <option value="wavy">
+                        Wavy
+                    </option>
+
+                    <option value="curly">
+                        Curly
+                    </option>
+
+                    <option value="coily">
+                        Coily
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- HAIR LENGTH -->
+
+            <div class="form-group">
+
+                <label for="hairLength">
+                    Hair Length
+                </label>
+
+                <select id="hairLength">
+
+                    <option value="">
+                        Select hair length
+                    </option>
+
+                    <option value="short">
+                        Short
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="long">
+                        Long
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- THICKNESS -->
+
+            <div class="form-group">
+
+                <label for="thickness">
+                    Hair Thickness
+                </label>
+
+                <select id="thickness">
+
+                    <option value="">
+                        Select thickness
+                    </option>
+
+                    <option value="fine">
+                        Fine
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="thick">
+                        Thick
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- HAIR COLOR -->
+
+            <div class="form-group">
+
+                <label for="hairColor">
+                    Hair Color
+                </label>
+
+                <select id="hairColor">
+
+                    <option value="">
+                        Select hair color
+                    </option>
+
+                    <option value="black">
+                        Black
+                    </option>
+
+                    <option value="brown">
+                        Brown
+                    </option>
+
+                    <option value="blonde">
+                        Blonde
+                    </option>
+
+                    <option value="red">
+                        Red
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="preference-buttons">
+
+            <button
+                id="recommendBtn"
+                type="button"
+                class="primary-btn">
+                ✨ Recommend Hairstyles
+            </button>
+
+
+            <button
+                id="skipBtn"
+                type="button"
+                class="secondary-btn">
+                Skip
+            </button>
+
+
+            <button
+                id="clearBtn"
+                type="button"
+                class="secondary-btn">
+                Clear
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <h2>Explore Hairstyles</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search hairstyles..."
+            autocomplete="off">
+
+    </section>
+
+
+    <!-- ================= FILTERS ================= -->
+
+    <section class="filters">
+
+        <h3>Filter Hairstyles</h3>
+
+        <div class="filter-grid">
+
+
+            <select id="filterFace">
+
+                <option value="">
+                    All Face Shapes
+                </option>
+
+                <option value="oval">Oval</option>
+                <option value="round">Round</option>
+                <option value="square">Square</option>
+                <option value="heart">Heart</option>
+                <option value="diamond">Diamond</option>
+                <option value="oblong">Oblong</option>
+
+            </select>
+
+
+            <select id="filterType">
+
+                <option value="">
+                    All Hair Types
+                </option>
+
+                <option value="straight">Straight</option>
+                <option value="wavy">Wavy</option>
+                <option value="curly">Curly</option>
+                <option value="coily">Coily</option>
+
+            </select>
+
+
+            <select id="filterLength">
+
+                <option value="">
+                    All Lengths
+                </option>
+
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+
+            </select>
+
+
+            <select id="filterThickness">
+
+                <option value="">
+                    All Thickness
+                </option>
+
+                <option value="fine">Fine</option>
+                <option value="medium">Medium</option>
+                <option value="thick">Thick</option>
+
+            </select>
+
+
+            <select id="filterColor">
+
+                <option value="">
+                    All Hair Colors
+                </option>
+
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="blonde">Blonde</option>
+                <option value="red">Red</option>
+                <option value="other">Other</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORY NAVIGATION ================= -->
+
+    <nav class="category-nav">
+
+        <a href="#braids">
+            Braids
+        </a>
+
+        <a href="#ponytails">
+            Ponytails
+        </a>
+
+        <a href="#buns">
+            Buns & Updos
+        </a>
+
+        <a href="#open-hair">
+            Open Hair
+        </a>
+
+        <a href="#half-up">
+            Half-Up
+        </a>
+
+        <a href="#everyday">
+            Everyday
+        </a>
+
+    </nav>
+
+
+    <!-- ================= RECOMMENDATIONS ================= -->
+
+    <section
+        id="recommendations"
+        class="recommendations hidden">
+
+        <div class="section-heading">
+
+            <h2>Recommended For You ✨</h2>
+
+            <p>
+                Based on your selected preferences
+            </p>
+
+        </div>
+
+
+        <div
+            id="recommendationGrid"
+            class="card-grid">
+        </div>
+
+    </section>
+
+
+    <!-- ================= ALL HAIRSTYLES ================= -->
+
+    <section id="sections">
+
+
+        <!-- BRAIDS -->
+
+        <section
+            id="braids"
+            class="hairstyle-section">
+
+            <div class="section-heading">
+
+                <h2>Braids</h2>
+
+                <p>
+                    Beautiful braided hairstyles
+                </p>
+
+            </div>
+
+            <div
+                class="card-grid"
+                data-category="braids">
+            </div>
+
+        </section>
+
+
+        <!-- PONYTAILS -->
+
+        <section
+            id="ponytails"
+            class="hairstyle-section">
+
+            <div class="section-heading">
+
+                <h2>Ponytails</h2>
+
+                <p>
+                    Simple and stylish ponytail looks
+                </p>
+
+            </div>
+
+            <div
+                class="card-grid"
+                data-category="ponytails">
+            </div>
+
+        </section>
+
+
+        <!-- BUNS -->
+
+        <section
+            id="buns"
+            class="hairstyle-section">
+
+            <div class="section-heading">
+
+                <h2>Buns & Updos</h2>
+
+                <p>
+                    Elegant hairstyles for special occasions
+                </p>
+
+            </div>
+
+            <div
+                class="card-grid"
+                data-category="buns">
+            </div>
+
+        </section>
+
+
+        <!-- OPEN HAIR -->
+
+        <section
+            id="open-hair"
+            class="hairstyle-section">
+
+            <div class="section-heading">
+
+                <h2>Open Hair</h2>
+
+                <p>
+                    Beautiful open hairstyles
+                </p>
+
+            </div>
+
+            <div
+                class="card-grid"
+                data-category="open-hair">
+            </div>
+
+        </section>
+
+
+        <!-- HALF UP -->
+
+        <section
+            id="half-up"
+            class="hairstyle-section">
+
+            <div class="section-heading">
+
+                <h2>Half-Up Hairstyles</h2>
+
+                <p>
+                    A combination of open and tied hair
+                </p>
+
+            </div>
+
+            <div
+                class="card-grid"
+                data-category="half-up">
+            </div>
+
+        </section>
+
+
+        <!-- EVERYDAY -->
+
+        <section
+            id="everyday"
+            class="hairstyle-section">
+
+            <div class="section-heading">
+
+                <h2>Everyday Hairstyles</h2>
+
+                <p>
+                    Easy hairstyles for daily use
+                </p>
+
+            </div>
+
+            <div
+                class="card-grid"
+                data-category="everyday">
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- ================= RECENTLY VIEWED ================= -->
+
+    <section
+        id="recentSection"
+        class="recent-section hidden">
+
+        <div class="section-heading">
+
+            <h2>Recently Viewed</h2>
+
+            <p>
+                Hairstyles you viewed recently
+            </p>
+
+        </div>
+
+
+        <div
+            id="recentGrid"
+            class="card-grid">
+        </div>
+
+    </section>
+
+
+    <!-- ================= NO RESULTS ================= -->
+
+    <section
+        id="noResults"
+        class="no-results hidden">
+
+        <h2>No Hairstyles Found</h2>
+
+        <p>
+            Try changing your search or filters.
+        </p>
+
+        <button
+            id="noResultClear"
+            type="button"
+            class="primary-btn">
+            Clear Filters
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- ================= DETAILS MODAL ================= -->
+
+<div
+    id="detailModal"
+    class="modal hidden">
+
+    <div class="modal-content">
+
+        <button
+            id="closeModal"
+            class="close-modal"
+            type="button">
+            ×
+        </button>
+
+
+        <div class="modal-image-container">
+
+            <img
+                id="modalImage"
+                src=""
+                alt="Hairstyle">
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <span
+                id="modalCategory"
+                class="modal-category">
+            </span>
+
+
+            <h2 id="modalTitle">
+                Hairstyle
+            </h2>
+
+
+            <p id="modalDescription">
+            </p>
+
+
+            <div
+                id="modalMeta"
+                class="modal-meta">
+            </div>
+
+
+            <h3>
+                How to Style
+            </h3>
+
+
+            <ol
+                id="modalSteps"
+                class="modal-steps">
+            </ol>
+
+
+            <button
+                id="tryBtn"
+                type="button"
+                class="primary-btn">
+                ✨ Try This Hairstyle
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="{{ url_for('static', filename='js/hairstyle.js') }}"></script>
+
+</body>
+</html>

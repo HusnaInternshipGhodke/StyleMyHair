@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleMyHair - Try On</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff7fb;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8d9e8, #fff5fa);
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #b85d8d;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            background: #b85d8d;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h1 {
+            color: #b85d8d;
+            margin-bottom: 8px;
+        }
+
+        .try-on-box {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(184, 93, 141, 0.12);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .preview {
+            min-height: 450px;
+            border: 2px dashed #e6a9c7;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff7fb;
+            overflow: hidden;
+        }
+
+        .preview img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        .info {
+            padding: 20px;
+        }
+
+        .info h2 {
+            color: #b85d8d;
+            font-size: 28px;
+        }
+
+        .info p {
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f8d9e8;
+            color: #8d3e68;
+            padding: 7px 13px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 14px;
+        }
+
+        .upload-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #fff0f7;
+            border-radius: 15px;
+        }
+
+        .upload-box input {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .main-btn {
+            margin-top: 20px;
+            border: none;
+            background: #b85d8d;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .main-btn:hover {
+            background: #9f4d79;
+        }
+
+        @media (max-width: 750px) {
+            .try-on-box {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 18px 5%;
+            }
+
+            .preview {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">STYLEMYHAIR</div>
+
+    <a href="{{ url_for('main.female') }}" class="back-btn">
+        ← Back
+    </a>
+</header>
+
+<div class="container">
+
+    <div class="title">
+        <h1>Try Your Hairstyle</h1>
+        <p>Explore how this hairstyle could look on you.</p>
+    </div>
+
+    <div class="try-on-box">
+
+        <div class="preview">
+            <img
+                id="styleImage"
+                src="{{ url_for('static', filename='images/female-modern-bob-1.jpg') }}"
+                alt="Hairstyle Preview"
+            >
+        </div>
+
+        <div class="info">
+
+            <h2 id="styleTitle">Modern Bob</h2>
+
+            <p id="styleDescription">
+                A stylish and modern bob hairstyle that gives a clean,
+                elegant and youthful appearance.
+            </p>
+
+            <div>
+                <span class="tag">Female</span>
+                <span class="tag">Modern</span>
+                <span class="tag">Easy Styling</span>
+            </div>
+
+            <div class="upload-box">
+                <h3>Upload Your Photo</h3>
+
+                <p>
+                    Upload a clear front-facing photo to explore the hairstyle.
+                </p>
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/*"
+                >
+
+                <button class="main-btn" onclick="previewPhoto()">
+                    Preview Photo
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const style = params.get("style");
+
+    const hairstyles = {
+        "modern-bob": {
+            title: "Modern Bob",
+            image: "/static/images/female-modern-bob-1.jpg",
+            description:
+                "A stylish and modern bob hairstyle that gives a clean, elegant and youthful appearance."
+        },
+
+        "long-layers": {
+            title: "Long Layers",
+            image: "/static/images/female-long-layers-1.jpg",
+            description:
+                "Long layered hair adds movement, volume and a soft elegant look."
+        },
+
+        "soft-waves": {
+            title: "Soft Waves",
+            image: "/static/images/female-soft-waves-1.jpg",
+            description:
+                "Soft waves create a beautiful natural and feminine appearance."
+        },
+
+        "defined-curls": {
+            title: "Defined Curls",
+            image: "/static/images/female-defined-curls-1.jpg",
+            description:
+                "Defined curls give your hair volume, texture and a stylish appearance."
+        }
+    };
+
+    if (style && hairstyles[style]) {
+        document.getElementById("styleTitle").textContent =
+            hairstyles[style].title;
+
+        document.getElementById("styleDescription").textContent =
+            hairstyles[style].description;
+
+        document.getElementById("styleImage").src =
+            hairstyles[style].image;
+    }
+
+    function previewPhoto() {
+        const input = document.getElementById("photoInput");
+
+        if (input.files && input.files[0]) {
+
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                document.getElementById("styleImage").src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            alert("Please upload a photo first.");
+        }
+    }
+</script>
+
+</body>
+</html>
