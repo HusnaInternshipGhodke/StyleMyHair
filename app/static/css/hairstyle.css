@@ -1,0 +1,616 @@
+/* =========================================================
+   STYLEMYHAIR - HAIRSTYLE PAGE
+   ========================================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.page-header {
+    text-align: center;
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #f8d9e8, #fff5fa);
+    border-bottom: 1px solid #f0c7dc;
+}
+
+.eyebrow {
+    color: #b85d8d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    color: #8f3d69;
+    margin-bottom: 12px;
+}
+
+.intro {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 35px auto 70px;
+}
+
+
+/* ---------- CARD ---------- */
+
+.card {
+    background: #ffffff;
+    border: 1px solid #f1d9e5;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(184, 93, 141, 0.08);
+}
+
+.card h2 {
+    color: #8f3d69;
+    margin-bottom: 22px;
+}
+
+
+/* ---------- PERSONALIZATION ---------- */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 7px;
+}
+
+select,
+.search-section input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e5c5d6;
+    border-radius: 10px;
+    background: #fff;
+    color: #444;
+    font-size: 14px;
+    outline: none;
+}
+
+select:focus,
+.search-section input:focus {
+    border-color: #b85d8d;
+    box-shadow: 0 0 0 3px rgba(184, 93, 141, 0.1);
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn,
+.text-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: #b85d8d;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #9f4b78;
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background: #f8e2ed;
+    color: #8f3d69;
+}
+
+.secondary-btn:hover {
+    background: #f2d3e2;
+}
+
+.text-btn {
+    background: transparent;
+    color: #b85d8d;
+}
+
+.text-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- SEARCH ---------- */
+
+.search-section {
+    margin-bottom: 25px;
+}
+
+.search-section input {
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+
+/* ---------- FILTERS ---------- */
+
+.filters {
+    margin-bottom: 25px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+
+/* ---------- CATEGORY NAV ---------- */
+
+.category-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #8f3d69;
+    background: #ffffff;
+    border: 1px solid #e9c9da;
+    padding: 9px 17px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.category-nav a:hover {
+    background: #f8e2ed;
+    transform: translateY(-1px);
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.section-block {
+    margin: 50px 0;
+    scroll-margin-top: 25px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    color: #8f3d69;
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ---------- CARD GRID ---------- */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* ---------- HAIRSTYLE CARD ---------- */
+
+.hairstyle-card {
+    background: #ffffff;
+    border: 1px solid #efd8e3;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(184, 93, 141, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hairstyle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(184, 93, 141, 0.15);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f7e8ef;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #b85d8d;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-btn.active {
+    color: #d63384;
+}
+
+.card-body {
+    padding: 17px;
+}
+
+.card-body h3 {
+    color: #8f3d69;
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.card-body p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.tag {
+    background: #f8e6ef;
+    color: #8f3d69;
+    border-radius: 15px;
+    padding: 4px 9px;
+    font-size: 11px;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.card-actions button {
+    flex: 1;
+    border: none;
+    padding: 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.view-btn {
+    background: #f8e2ed;
+    color: #8f3d69;
+}
+
+.try-btn {
+    background: #b85d8d;
+    color: white;
+}
+
+
+/* ---------- HIDDEN ---------- */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ---------- NO RESULTS ---------- */
+
+.no-results {
+    text-align: center;
+    background: white;
+    border: 1px solid #efd8e3;
+    border-radius: 16px;
+    padding: 50px 20px;
+    margin: 40px 0;
+}
+
+.no-results h2 {
+    color: #8f3d69;
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- MODAL ---------- */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: rgba(40, 20, 30, 0.65);
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    z-index: 5;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #8f3d69;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal-image-wrapper {
+    min-height: 500px;
+    background: #f8e6ef;
+}
+
+.modal-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 40px 35px;
+}
+
+.modal-category {
+    color: #b85d8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.modal-body h2 {
+    color: #8f3d69;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.modal-body > p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.modal-body h3 {
+    color: #8f3d69;
+    margin-bottom: 10px;
+}
+
+.modal-body ol {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.modal-body li {
+    margin-bottom: 7px;
+    color: #555;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1000px) {
+
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modal-content {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .modal-image-wrapper {
+        height: 350px;
+        min-height: 0;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .page-header {
+        padding: 40px 18px;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card-image {
+        height: 230px;
+    }
+
+    .card-body {
+        padding: 13px;
+    }
+
+    .card-body h3 {
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .intro {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 300px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .text-btn {
+        width: 100%;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-body {
+        padding: 28px 20px;
+    }
+
+    .modal-body h2 {
+        font-size: 24px;
+    }
+}

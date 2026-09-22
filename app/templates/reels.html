@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleMyHair | Reels</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/reels.css') }}?v=20"
+    >
+</head>
+
+<body>
+
+<header class="reels-header">
+
+    <a
+        href="{{ url_for('main.female') }}"
+        class="back-button"
+        aria-label="Back"
+    >
+        ←
+    </a>
+
+    <div class="reels-logo">
+        <span>Style</span>MyHair
+    </div>
+
+    <h1>Reels</h1>
+
+    <button
+        type="button"
+        class="search-button"
+        id="openSearch"
+    >
+        🔍
+    </button>
+
+</header>
+
+
+<!-- SEARCH -->
+<div class="search-box" id="searchBox">
+
+    <input
+        type="text"
+        id="reelSearch"
+        placeholder="Search hairstyles..."
+        autocomplete="off"
+    >
+
+    <button
+        type="button"
+        id="closeSearch"
+    >
+        ✕
+    </button>
+
+</div>
+
+
+<main class="reels-container" id="reelsContainer">
+
+
+    <!-- =====================================================
+         REEL 1
+    ====================================================== -->
+
+    <article
+        class="reel"
+        data-reel-id="reel-1"
+        data-title="Elegant Long Layers"
+        data-description="Soft layered hairstyle for a stylish everyday look."
+        data-hashtags="#longhair #layers #hairstyle"
+    >
+
+        <video
+            class="reel-video"
+            src="{{ url_for('static', filename='videos/reel1.mp4') }}"
+            loop
+            muted
+            playsinline
+            preload="metadata"
+        ></video>
+
+
+        <div class="video-dark"></div>
+
+
+        <button
+            type="button"
+            class="mute-button"
+        >
+            🔇
+        </button>
+
+
+        <div class="reel-info">
+
+            <h2>Elegant Long Layers</h2>
+
+            <p>
+                Soft layered hairstyle for a stylish everyday look.
+            </p>
+
+            <strong>
+                #LongHair #Layers #Hairstyle
+            </strong>
+
+        </div>
+
+
+        <div class="reel-actions">
+
+            <button
+                type="button"
+                class="reel-action like-button"
+            >
+                <span class="action-icon like-icon">♡</span>
+                <small>Like</small>
+            </button>
+
+
+            <button
+                type="button"
+                class="reel-action comment-button"
+            >
+                <span class="action-icon">💬</span>
+                <small>Comment</small>
+            </button>
+
+
+            <button
+                type="button"
+                class="reel-action share-button"
+            >
+                <span class="action-icon">↗</span>
+                <small>Share</small>
+            </button>
+
+
+            <button
+                type="button"
+                class="reel-action save-button"
+            >
+                <span class="action-icon save-icon">🔖</span>
+                <small>Save</small>
+            </button>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         REEL 2
+    ====================================================== -->
+
+    <article
+        class="reel"
+        data-reel-id="reel-2"
+        data-title="Modern Bob"
+        data-description="A clean modern bob hairstyle with an elegant finish."
+        data-hashtags="#bob #bobcut #womenshair"
+    >
+
+        <video
+            class="reel-video"
+            src="{{ url_for('static', filename='videos/reel2.mp4') }}"
+            loop
+            muted
+            playsinline
+            preload="metadata"
+        ></video>
+
+        <div class="video-dark"></div>
+
+        <button
+            type="button"
+            class="mute-button"
+        >
+            🔇
+        </button>
+
+
+        <div class="reel-info">
+
+            <h2>Modern Bob</h2>
+
+            <p>
+                A clean modern bob hairstyle with an elegant finish.
+            </p>
+
+            <strong>
+                #Bob #BobCut #WomensHair
+            </strong>
+
+        </div>
+
+
+        <div class="reel-actions">
+
+            <button type="button" class="reel-action like-button">
+                <span class="action-icon like-icon">♡</span>
+                <small>Like</small>
+            </button>
+
+            <button type="button" class="reel-action comment-button">
+                <span class="action-icon">💬</span>
+                <small>Comment</small>
+            </button>
+
+            <button type="button" class="reel-action share-button">
+                <span class="action-icon">↗</span>
+                <small>Share</small>
+            </button>
+
+            <button type="button" class="reel-action save-button">
+                <span class="action-icon save-icon">🔖</span>
+                <small>Save</small>
+            </button>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         REEL 3
+    ====================================================== -->
+
+    <article
+        class="reel"
+        data-reel-id="reel-3"
+        data-title="Elegant Braids"
+        data-description="Beautiful braided hairstyle for a graceful look."
+        data-hashtags="#braids #braidedhair #hairstyle"
+    >
+
+        <video
+            class="reel-video"
+            src="{{ url_for('static', filename='videos/reel3.mp4') }}"
+            loop
+            muted
+            playsinline
+            preload="metadata"
+        ></video>
+
+        <div class="video-dark"></div>
+
+        <button
+            type="button"
+            class="mute-button"
+        >
+            🔇
+        </button>
+
+
+        <div class="reel-info">
+
+            <h2>Elegant Braids</h2>
+
+            <p>
+                Beautiful braided hairstyle for a graceful look.
+            </p>
+
+            <strong>
+                #Braids #BraidedHair #Hairstyle
+            </strong>
+
+        </div>
+
+
+        <div class="reel-actions">
+
+            <button type="button" class="reel-action like-button">
+                <span class="action-icon like-icon">♡</span>
+                <small>Like</small>
+            </button>
+
+            <button type="button" class="reel-action comment-button">
+                <span class="action-icon">💬</span>
+                <small>Comment</small>
+            </button>
+
+            <button type="button" class="reel-action share-button">
+                <span class="action-icon">↗</span>
+                <small>Share</small>
+            </button>
+
+            <button type="button" class="reel-action save-button">
+                <span class="action-icon save-icon">🔖</span>
+                <small>Save</small>
+            </button>
+
+        </div>
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     COMMENTS POPUP
+====================================================== -->
+
+<div
+    class="comments-overlay"
+    id="commentsOverlay"
+>
+
+    <div
+        class="comments-panel"
+        id="commentsPanel"
+    >
+
+        <div class="comments-header">
+
+            <h2>Comments</h2>
+
+            <button
+                type="button"
+                id="closeComments"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="comments-list"
+            id="commentsList"
+        ></div>
+
+
+        <form
+            class="comment-form"
+            id="commentForm"
+        >
+
+            <input
+                type="text"
+                id="commentInput"
+                placeholder="Add a comment..."
+                maxlength="200"
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Post
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- SHARE MESSAGE -->
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+
+<script
+    src="{{ url_for('static', filename='js/reels.js') }}?v=20"
+></script>
+
+</body>
+</html>

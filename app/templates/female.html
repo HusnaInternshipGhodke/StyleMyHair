@@ -146,7 +146,9 @@
             </span>
 
         </a>
+        
 
+ 
 
         <a
             href="#hairstyles"
@@ -160,7 +162,18 @@
             </span>
 
         </a>
-
+                 <a href="{{ url_for('main.reels') }}" class="sidebar-link" data-section="reels">
+    <span class="sidebar-icon">🎬</span>
+    <span>Reels</span>
+    </a>
+    <a
+    href="{{ url_for('main.saved_reels') }}"
+    class="sidebar-link"
+    data-section="saved-reels"
+>
+    <span class="sidebar-icon">🔖</span>
+    <span>Saved Reels</span>
+</a>
 
         <a
             href="#haircuts"

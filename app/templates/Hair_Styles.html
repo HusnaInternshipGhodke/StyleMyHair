@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hair Styles | StyleMyHair</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/Hair_Styles.css') }}">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="top-header">
+
+    <div class="header-left">
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <a href="{{ url_for('main.home') }}" class="logo">
+            Style<span>My</span>Hair
+        </a>
+
+    </div>
+
+    <div class="search-box">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search hairstyles... e.g. long braid, short braid, curly"
+            autocomplete="off"
+        >
+
+        <button id="clearSearch" class="clear-search">×</button>
+
+    </div>
+
+    <div class="header-actions">
+
+        <button type="button" id="themeBtn" title="Theme">⚙</button>
+
+        <button type="button" id="headerFavorite" title="Favorites">♡</button>
+
+        <button type="button" id="profileBtn" title="Profile">◯</button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="page-layout">
+
+
+    <!-- ================= FILTER SIDEBAR ================= -->
+
+    <aside class="filter-sidebar" id="filterSidebar">
+
+        <div class="filter-heading">
+            <h2>Filter By</h2>
+
+            <button id="resetButton" class="reset-btn">
+                Reset
+            </button>
+        </div>
+
+
+        <!-- HAIR LENGTH -->
+
+        <div class="filter-group">
+
+            <h3>Hair Length</h3>
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-option active"
+                    data-filter="length"
+                    data-value="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="length"
+                    data-value="short">
+                    Short
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="length"
+                    data-value="medium">
+                    Medium
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="length"
+                    data-value="long">
+                    Long
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- HAIR TYPE -->
+
+        <div class="filter-group">
+
+            <h3>Hair Type</h3>
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-option active"
+                    data-filter="type"
+                    data-value="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="type"
+                    data-value="straight">
+                    Straight
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="type"
+                    data-value="wavy">
+                    Wavy
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="type"
+                    data-value="curly">
+                    Curly
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FACE SHAPE -->
+
+        <div class="filter-group">
+
+            <h3>Face Shape</h3>
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-option active"
+                    data-filter="face"
+                    data-value="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="face"
+                    data-value="oval">
+                    Oval
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="face"
+                    data-value="round">
+                    Round
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="face"
+                    data-value="heart">
+                    Heart
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="face"
+                    data-value="square">
+                    Square
+                </button>
+
+                <button
+                    class="filter-option"
+                    data-filter="face"
+                    data-value="long">
+                    Long
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- HAIR COLOR -->
+
+        <div class="filter-group">
+
+            <h3>Hair Color</h3>
+
+            <div class="color-options">
+
+                <button
+                    class="color-filter active"
+                    data-color="all">
+                    <span class="color-dot all-color"></span>
+                    All
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="black">
+                    <span class="color-dot black"></span>
+                    Black
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="brown">
+                    <span class="color-dot brown"></span>
+                    Brown
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="blonde">
+                    <span class="color-dot blonde"></span>
+                    Blonde
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="red">
+                    <span class="color-dot red"></span>
+                    Red
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="burgundy">
+                    <span class="color-dot burgundy"></span>
+                    Burgundy
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="blue">
+                    <span class="color-dot blue"></span>
+                    Blue
+                </button>
+
+                <button
+                    class="color-filter"
+                    data-color="purple">
+                    <span class="color-dot purple"></span>
+                    Purple
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= CONTENT ================= -->
+
+    <main class="main-content">
+
+        <div class="content-top">
+
+            <div>
+                <p class="eyebrow">CURATED COLLECTION</p>
+
+                <h1>Hair Styles</h1>
+
+                <p class="subtitle">
+                    Explore hairstyles and find the perfect look for you.
+                </p>
+            </div>
+
+            <div class="result-count" id="braidCount">
+                7 styles
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY NAVIGATION -->
+
+        <div class="category-row">
+
+            <button class="category active" data-category="all">
+                All
+            </button>
+
+            <button class="category" data-category="braids">
+                Braids
+            </button>
+
+            <button class="category" data-category="buns">
+                Buns
+            </button>
+
+            <button class="category" data-category="ponytails">
+                Ponytails
+            </button>
+
+            <button class="category" data-category="waves">
+                Waves
+            </button>
+
+        </div>
+
+
+        <!-- ================= STYLE CARDS ================= -->
+
+        <section class="styles-grid" id="styleGrid">
+
+
+            <!-- LONG DUTCH BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Long Dutch Braid"
+                data-length="long"
+                data-type="wavy"
+                data-face="oval heart"
+                data-color="black brown"
+                data-category="braids"
+                data-keywords="long dutch braid braided hairstyle">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-1.jpg') }}"
+                        alt="Long Dutch Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Long Dutch Braid</h2>
+
+                    <p class="card-description">
+                        Long • Wavy • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Oval</span>
+                        <span>Heart</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="long-dutch-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- DUTCH BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Dutch Braid"
+                data-length="long"
+                data-type="straight"
+                data-face="oval round heart"
+                data-color="black brown blonde"
+                data-category="braids"
+                data-keywords="dutch braid long braid">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-2.jpg') }}"
+                        alt="Dutch Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Dutch Braid</h2>
+
+                    <p class="card-description">
+                        Long • Straight • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Oval</span>
+                        <span>Round</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="dutch-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- FISHTAIL BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Fishtail Braid"
+                data-length="long"
+                data-type="wavy"
+                data-face="oval heart square"
+                data-color="black brown blonde"
+                data-category="braids"
+                data-keywords="fishtail braid long braid">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-3.jpg') }}"
+                        alt="Fishtail Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Fishtail Braid</h2>
+
+                    <p class="card-description">
+                        Long • Wavy • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Oval</span>
+                        <span>Heart</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="fishtail-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- WATERFALL BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Waterfall Braid"
+                data-length="long"
+                data-type="wavy"
+                data-face="oval round heart"
+                data-color="brown blonde"
+                data-category="braids"
+                data-keywords="waterfall braid wavy braid">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-1.jpg') }}"
+                        alt="Waterfall Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Waterfall Braid</h2>
+
+                    <p class="card-description">
+                        Long • Wavy • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Oval</span>
+                        <span>Round</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="waterfall-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CROWN BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Crown Braid"
+                data-length="medium"
+                data-type="straight"
+                data-face="oval heart"
+                data-color="black brown blonde"
+                data-category="braids"
+                data-keywords="crown braid medium braid">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-2.jpg') }}"
+                        alt="Crown Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Crown Braid</h2>
+
+                    <p class="card-description">
+                        Medium • Straight • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Oval</span>
+                        <span>Heart</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="crown-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- SIDE BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Side Braid"
+                data-length="medium"
+                data-type="wavy"
+                data-face="round square long"
+                data-color="black brown red"
+                data-category="braids"
+                data-keywords="side braid medium wavy braid">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-3.jpg') }}"
+                        alt="Side Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Side Braid</h2>
+
+                    <p class="card-description">
+                        Medium • Wavy • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Round</span>
+                        <span>Square</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="side-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLASSIC BRAID -->
+
+            <article
+                class="style-card"
+                data-name="Classic Braid"
+                data-length="long"
+                data-type="straight"
+                data-face="oval round long"
+                data-color="black brown burgundy"
+                data-category="braids"
+                data-keywords="classic braid simple braid long braid">
+
+                <div class="card-image">
+
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-1.jpg') }}"
+                        alt="Classic Braid">
+
+                    <button class="favorite" type="button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h2>Classic Braid</h2>
+
+                    <p class="card-description">
+                        Long • Straight • Braid
+                    </p>
+
+                    <div class="face-tags">
+                        <span>Oval</span>
+                        <span>Long</span>
+                    </div>
+
+                    <button
+                        class="try-button"
+                        data-style="classic-braid">
+                        Try On
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- NO RESULTS -->
+
+        <div id="noResults" class="no-results">
+
+            <div class="no-results-icon">⌕</div>
+
+            <h2>No hairstyles found</h2>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+            <button id="noResultsReset">
+                Reset Filters
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ================= MOBILE NAV ================= -->
+
+<nav class="mobile-nav">
+
+    <a href="{{ url_for('main.home') }}">
+        <span>⌂</span>
+        Home
+    </a>
+
+    <a href="{{ url_for('main.hair_styles') }}" class="active">
+        <span>✦</span>
+        Styles
+    </a>
+
+    <a href="{{ url_for('main.female_try_on') }}">
+        <span>◉</span>
+        Try On
+    </a>
+
+    <button id="mobileFavorite">
+        <span>♡</span>
+        Favorites
+    </button>
+
+</nav>
+
+
+<script src="{{ url_for('static', filename='js/hairstyle.js') }}?v=1"></script>
+
+</body>
+</html>
