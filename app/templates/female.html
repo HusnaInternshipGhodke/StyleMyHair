@@ -146,12 +146,12 @@
             </span>
 
         </a>
-        
 
- 
+
+        <!-- HAIR STYLES -->
 
         <a
-            href="#hairstyles"
+            href="{{ url_for('main.hair_styles') }}"
             class="sidebar-link"
         >
 
@@ -162,18 +162,41 @@
             </span>
 
         </a>
-                 <a href="{{ url_for('main.reels') }}" class="sidebar-link" data-section="reels">
-    <span class="sidebar-icon">🎬</span>
-    <span>Reels</span>
-    </a>
-    <a
-    href="{{ url_for('main.saved_reels') }}"
-    class="sidebar-link"
-    data-section="saved-reels"
->
-    <span class="sidebar-icon">🔖</span>
-    <span>Saved Reels</span>
-</a>
+
+
+        <!-- REELS -->
+
+        <a
+            href="{{ url_for('main.reels') }}"
+            class="sidebar-link"
+            data-section="reels"
+        >
+
+            <span class="sidebar-icon">🎬</span>
+
+            <span>
+                Reels
+            </span>
+
+        </a>
+
+
+        <!-- SAVED REELS -->
+
+        <a
+            href="{{ url_for('main.saved_reels') }}"
+            class="sidebar-link"
+            data-section="saved-reels"
+        >
+
+            <span class="sidebar-icon">🔖</span>
+
+            <span>
+                Saved Reels
+            </span>
+
+        </a>
+
 
         <a
             href="#haircuts"
@@ -601,25 +624,28 @@
     </header>
 
 
-   
-        <!-- =====================================================
-     PAGE BACK BUTTON
-====================================================== -->
 
-<div class="page-back-wrapper">
 
-    <button
-        type="button"
-        class="page-back-button"
-        id="pageBackButton"
-        aria-label="Go back to previous page"
-    >
-        <span class="back-arrow">←</span>
-        <span class="back-text">Back</span>
-    </button>
+    <!-- =====================================================
+         PAGE BACK BUTTON
+    ====================================================== -->
 
-</div>
- <!-- =================================================
+    <div class="page-back-wrapper">
+
+        <button
+            type="button"
+            class="page-back-button"
+            id="pageBackButton"
+            aria-label="Go back to previous page"
+        >
+            <span class="back-arrow">←</span>
+            <span class="back-text">Back</span>
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
          MAIN
     ================================================== -->
 
@@ -2433,7 +2459,7 @@
 
 <!-- =====================================================
      BACK BUTTON FALLBACK
-     
+
      This is intentionally placed AFTER female.js.
      If female.js does not already control the button,
      this guarantees that the button has a working action.
@@ -2481,7 +2507,7 @@
     });
 
 </script>
-```
+
 
 </body>
 
