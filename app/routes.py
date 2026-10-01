@@ -49,9 +49,9 @@ def male():
 
 @main.route("/reels")
 def reels():
-    return render_template("reels.html")
+    return render_template("reel.html")
     # ================= SAVED REELS =================
 
 @main.route("/saved-reels")
 def saved_reels():
-    return render_template("saved_reels.html")
+    return render_template("saved_reel.html")
