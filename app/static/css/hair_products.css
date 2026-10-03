@@ -1,0 +1,955 @@
+/* =========================================================
+   STYLEMYHAIR
+   HAIR PRODUCTS PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.hair-products-main {
+    padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hair-products-hero {
+    padding: 34px 4% 18px;
+}
+
+.hair-products-title-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hair-products-icon {
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d62f86,
+            #ef76ad
+        );
+
+    color: white;
+
+    box-shadow:
+        0 12px 28px rgba(196, 45, 119, 0.22);
+}
+
+.hair-products-eyebrow {
+    display: block;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    color: #c1377c;
+
+    margin-bottom: 5px;
+}
+
+.hair-products-title-area h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.05;
+
+    color: #8e185f;
+}
+
+.hair-products-title-area p {
+    margin:
+        8px
+        0
+        0;
+
+    color: #6f6170;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.hair-products-search-section {
+    padding:
+        0
+        4%
+        22px;
+}
+
+.hair-products-search {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding:
+        0
+        18px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border:
+        1px solid rgba(203, 49, 130, 0.15);
+
+    box-shadow:
+        0 8px 26px rgba(191, 47, 113, 0.08);
+}
+
+.hair-products-search > span {
+    font-size: 21px;
+
+    color: #b82b76;
+}
+
+.hair-products-search input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 14px;
+
+    color: #45203d;
+}
+
+.hair-products-search input::placeholder {
+    color: #9b8897;
+}
+
+.hair-products-search button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #9d7690;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.product-section {
+    padding:
+        0
+        4%
+        30px;
+}
+
+.product-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 16px;
+}
+
+.product-section-heading h2 {
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: #74164e;
+
+    font-size: 23px;
+}
+
+.product-result-count {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #9b7c8f;
+}
+
+.see-all-button {
+    border: 0;
+
+    background: transparent;
+
+    color: #bc2679;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRODUCT CATEGORY GRID
+   ========================================================= */
+
+.product-category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(8, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.product-category-card {
+    min-height: 108px;
+
+    border:
+        1px solid
+        rgba(205, 55, 132, 0.14);
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffafd,
+            #fff0f7
+        );
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    color: #641947;
+
+    transition:
+        0.2s ease;
+}
+
+.product-category-card:hover {
+    transform: translateY(-3px);
+}
+
+.product-category-card.active {
+    background:
+        linear-gradient(
+            135deg,
+            #d52f83,
+            #ef77ad
+        );
+
+    border-color: transparent;
+
+    color: white;
+
+    box-shadow:
+        0 10px 24px
+        rgba(205, 47, 125, 0.2);
+}
+
+.category-symbol {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    background:
+        rgba(255,255,255,0.75);
+
+    color: #c32879;
+}
+
+.product-category-card.active .category-symbol {
+    background:
+        rgba(255,255,255,0.20);
+
+    color: white;
+}
+
+.product-category-card strong {
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HAIR TYPE
+   ========================================================= */
+
+.hair-type-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(8, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.hair-type-card {
+    border:
+        1px solid
+        rgba(204, 54, 131, 0.15);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background:
+        #fff5fa;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    color: #6c1b4e;
+
+    transition:
+        0.2s ease;
+}
+
+.hair-type-card:hover {
+    transform: translateY(-3px);
+}
+
+.hair-type-card.active {
+    border:
+        2px solid
+        #c9277d;
+
+    box-shadow:
+        0 8px 22px
+        rgba(195, 42, 121, 0.15);
+}
+
+.hair-type-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #f9ecf7
+        );
+
+    overflow: hidden;
+}
+
+.hair-type-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.hair-type-card strong {
+    display: block;
+
+    padding:
+        9px
+        6px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PRODUCTS GRID
+   ========================================================= */
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.product-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(202, 48, 123, 0.13);
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,0.90);
+
+    box-shadow:
+        0 8px 22px
+        rgba(175, 62, 115, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(175, 62, 115, 0.13);
+}
+
+.product-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: 220px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff2f8,
+            #f6eafa
+        );
+
+    overflow: hidden;
+}
+
+.product-image-wrap img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    padding: 15px;
+}
+
+.product-favorite {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.93);
+
+    color: #ce2d80;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.08);
+}
+
+.product-favorite.active {
+    background: #cf2e81;
+
+    color: white;
+}
+
+.product-card-body {
+    padding: 14px;
+}
+
+.product-card-body h3 {
+    margin: 0 0 7px;
+
+    color: #60153f;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+}
+
+.product-card-body p {
+    margin: 0 0 8px;
+
+    color: #7c6675;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.product-hair-tag {
+    display: inline-flex;
+
+    padding:
+        5px
+        9px;
+
+    border-radius: 20px;
+
+    background:
+        #ffe1ef;
+
+    color: #bd2777;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.product-price {
+    margin-top: 11px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #5a123d;
+}
+
+.product-actions {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.product-fav-button,
+.product-buy-button {
+    min-height: 38px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.product-fav-button {
+    border:
+        1px solid #d54b91;
+
+    background: white;
+
+    color: #c12878;
+}
+
+.product-buy-button {
+    border: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c72579,
+            #e264a0
+        );
+
+    color: white;
+}
+
+
+/* =========================================================
+   BEST FOR YOU
+   ========================================================= */
+
+.best-for-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.best-for-card {
+    min-height: 180px;
+
+    border: 0;
+
+    border-radius: 19px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.best-for-card > div {
+    max-width: 70%;
+}
+
+.best-for-card > div > span {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.best-for-card h3 {
+    margin:
+        8px
+        0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+}
+
+.best-for-card p {
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.dry-card {
+    background:
+        linear-gradient(
+            135deg,
+            #ffe3ee,
+            #fcecf5
+        );
+
+    color: #7c1a51;
+}
+
+.curly-card {
+    background:
+        linear-gradient(
+            135deg,
+            #eee2ff,
+            #f8eefe
+        );
+
+    color: #61217d;
+}
+
+.frizzy-card {
+    background:
+        linear-gradient(
+            135deg,
+            #dff5ed,
+            #eefbf4
+        );
+
+    color: #23654f;
+}
+
+.best-for-arrow {
+    align-self: flex-start;
+
+    padding:
+        7px
+        13px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.78);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+.no-products {
+    display: none;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.68);
+}
+
+.no-products.show {
+    display: block;
+}
+
+.no-products span {
+    display: block;
+
+    font-size: 30px;
+
+    color: #c92d7d;
+
+    margin-bottom: 8px;
+}
+
+.no-products h3 {
+    margin: 0 0 7px;
+
+    color: #681648;
+
+    font-family:
+        "Playfair Display",
+        serif;
+}
+
+.no-products p {
+    margin: 0;
+
+    color: #8b7483;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark-mode .hair-products-title-area h2,
+.dark-mode .product-section-heading h2,
+.dark-mode .product-card-body h3,
+.dark-mode .product-price,
+.dark-mode .no-products h3 {
+    color: #ffd3e8;
+}
+
+.dark-mode .hair-products-title-area p,
+.dark-mode .product-result-count,
+.dark-mode .product-card-body p {
+    color: #ceb9c7;
+}
+
+.dark-mode .hair-products-search,
+.dark-mode .product-card {
+    background:
+        rgba(52, 32, 45, 0.88);
+
+    border-color:
+        rgba(255,255,255,0.09);
+}
+
+.dark-mode .hair-products-search input {
+    color: white;
+}
+
+.dark-mode .product-category-card,
+.dark-mode .hair-type-card {
+    background:
+        rgba(62, 37, 53, 0.88);
+
+    color: #ffd9ea;
+
+    border-color:
+        rgba(255,255,255,0.09);
+}
+
+.dark-mode .product-image-wrap {
+    background:
+        #3d2535;
+}
+
+.dark-mode .product-fav-button {
+    background:
+        #442b3b;
+
+    color: #ffabd1;
+
+    border-color:
+        #8e4c6f;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .product-category-grid,
+    .hair-type-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .best-for-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .hair-products-title-area {
+        align-items: flex-start;
+    }
+
+    .hair-products-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 24px;
+
+        flex-shrink: 0;
+    }
+
+    .product-category-grid,
+    .hair-type-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .products-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .product-image-wrap {
+        height: 240px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hair-products-title-area {
+        gap: 12px;
+    }
+
+    .hair-products-title-area h2 {
+        font-size: 29px;
+    }
+
+    .product-section-heading {
+        align-items: flex-start;
+    }
+
+    .product-section-heading h2 {
+        font-size: 20px;
+    }
+
+    .hair-products-search {
+        min-height: 48px;
+    }
+
+    .product-category-card {
+        min-height: 100px;
+    }
+
+}

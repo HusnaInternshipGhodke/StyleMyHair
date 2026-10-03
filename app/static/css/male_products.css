@@ -1,0 +1,1244 @@
+/* =========================================================
+   STYLEMYHAIR
+   MALE HAIR PRODUCTS PAGE
+   ========================================================= */
+
+:root {
+    --primary-color: #4f5ff5;
+    --primary-light: #eef0ff;
+    --primary-dark: #3d4de0;
+
+    --bg-color: #f5f7fb;
+    --card-bg: #ffffff;
+
+    --text-color: #17233d;
+    --text-light: #718096;
+
+    --border-color: #e3e7ef;
+
+    --sidebar-width: 255px;
+    --header-height: 78px;
+
+    --shadow: 0 5px 18px rgba(24, 39, 75, 0.08);
+    --shadow-hover: 0 12px 28px rgba(24, 39, 75, 0.13);
+
+    --radius: 15px;
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   BASIC RESET
+   ========================================================= */
+
+.male-products-page,
+.male-products-page * {
+    box-sizing: border-box;
+}
+
+.male-products-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    font-family: "Inter", "Manrope", sans-serif;
+}
+
+.male-products-page img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MAIN AREA
+   ========================================================= */
+
+.male-products-page .male-main {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.male-products-page .male-topbar {
+    height: var(--header-height);
+    width: calc(100% - var(--sidebar-width));
+
+    margin-left: var(--sidebar-width);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 800;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 25px;
+
+    background: #24262d;
+    border-bottom: 1px solid #30333c;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* BACK BUTTON */
+
+.male-products-page .back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    height: 42px;
+    padding: 0 15px;
+
+    border-radius: 12px;
+
+    background: #171a22;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.male-products-page .back-button:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.male-products-page .back-button span {
+    font-size: 18px;
+}
+
+
+/* TOPBAR TITLE */
+
+.male-products-page .topbar-title {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 20px;
+}
+
+.male-products-page .topbar-title span {
+    margin-bottom: 4px;
+
+    color: #8d99ff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.male-products-page .topbar-title strong {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* TOPBAR ACTIONS */
+
+.male-products-page .topbar-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.male-products-page .top-icon,
+.male-products-page .top-profile {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #171a22;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: var(--transition);
+}
+
+.male-products-page .top-icon:hover,
+.male-products-page .top-profile:hover {
+    background: var(--primary-color);
+}
+
+
+/* =========================================================
+   PRODUCT PAGE
+   ========================================================= */
+
+.male-products-page .products-page {
+    margin-left: var(--sidebar-width);
+
+    padding:
+        calc(var(--header-height) + 32px)
+        38px
+        60px;
+
+    max-width: 1600px;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.male-products-page .products-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-bottom: 38px;
+}
+
+.male-products-page .products-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--primary-color);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.male-products-page .products-top h1 {
+    margin: 0 0 8px;
+
+    color: var(--text-color);
+
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.male-products-page .products-top p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.male-products-page .product-search {
+    position: relative;
+
+    width: min(520px, 100%);
+}
+
+.male-products-page .product-search > span {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    color: var(--text-light);
+
+    font-size: 18px;
+}
+
+.male-products-page .product-search input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 18px 0 48px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: var(--text-color);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.male-products-page .product-search input:focus {
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 95, 245, 0.12),
+        var(--shadow);
+}
+
+.male-products-page .product-search input::placeholder {
+    color: #9aa3b2;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.male-products-page .product-section {
+    margin-bottom: 38px;
+}
+
+.male-products-page .product-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.male-products-page .product-section-heading h2 {
+    margin: 0;
+
+    color: var(--text-color);
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.male-products-page .product-section-heading button {
+    padding: 7px 5px;
+
+    border: none;
+
+    background: transparent;
+    color: var(--primary-color);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.male-products-page .product-section-heading button:hover {
+    color: var(--primary-dark);
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+   ========================================================= */
+
+.male-products-page .category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(9, minmax(95px, 1fr));
+
+    gap: 10px;
+}
+
+.male-products-page .product-category-card {
+    min-height: 92px;
+
+    padding: 14px 9px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    background: #ffffff;
+    color: var(--text-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.male-products-page .product-category-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--primary-color);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.male-products-page .product-category-card.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+
+    color: #ffffff;
+}
+
+.male-products-page .category-icon {
+    color: var(--primary-color);
+
+    font-size: 20px;
+    line-height: 1;
+}
+
+.male-products-page .product-category-card.active .category-icon {
+    color: #ffffff;
+}
+
+.male-products-page .product-category-card strong {
+    font-size: 12px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HAIR TYPE GRID
+   ========================================================= */
+
+.male-products-page .hair-type-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.male-products-page .hair-type-card {
+    min-height: 175px;
+
+    padding: 0;
+
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+
+    background: #ffffff;
+    color: var(--text-color);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.male-products-page .hair-type-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--primary-color);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.male-products-page .hair-type-image {
+    width: 100%;
+    height: 125px;
+
+    overflow: hidden;
+
+    background: #f0f2f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.male-products-page .hair-type-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transition: transform 0.35s ease;
+}
+
+.male-products-page .hair-type-card:hover .hair-type-image img {
+    transform: scale(1.05);
+}
+
+.male-products-page .hair-type-card strong {
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONCERN GRID
+   ========================================================= */
+
+.male-products-page .concern-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+}
+
+.male-products-page .concern-card {
+    min-height: 82px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    background: #ffffff;
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+.male-products-page .concern-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--primary-color);
+
+    color: var(--primary-color);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.male-products-page .concern-card span {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: var(--primary-light);
+    color: var(--primary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+.male-products-page .concern-card strong {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FEATURED PRODUCTS
+   ========================================================= */
+
+.male-products-page .featured-section {
+    margin-top: 45px;
+}
+
+.male-products-page .featured-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.male-products-page .featured-heading h2 {
+    margin: 0 0 5px;
+
+    color: var(--text-color);
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.male-products-page .featured-heading p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESET BUTTON
+   ========================================================= */
+
+.male-products-page #resetProducts,
+.male-products-page #resetNoProducts {
+    padding: 9px 16px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--primary-light);
+    color: var(--primary-color);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.male-products-page #resetProducts:hover,
+.male-products-page #resetNoProducts:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.male-products-page .products-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.male-products-page .product-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.male-products-page .product-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(79, 95, 245, 0.35);
+
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+   IMPORTANT: PREVENTS IMAGE GLITCHING
+   ========================================================= */
+
+.male-products-page .product-image-wrap {
+    width: 100%;
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f7f8fb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
+   When JavaScript creates:
+
+   <img class="product-image">
+
+   directly inside the product card
+*/
+
+.male-products-page .product-card > img.product-image {
+    width: 100%;
+    height: 220px;
+
+    max-width: 100%;
+    max-height: 220px;
+
+    display: block;
+
+    margin: 0;
+
+    padding: 18px;
+
+    object-fit: contain;
+    object-position: center center;
+
+    background: #f7f8fb;
+
+    vertical-align: middle;
+
+    transform: none;
+
+    transition: none;
+}
+
+
+/*
+   When the image is inside .product-image-wrap
+*/
+
+.male-products-page .product-image-wrap img.product-image {
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    display: block;
+
+    margin: 0;
+
+    padding: 18px;
+
+    object-fit: contain;
+    object-position: center center;
+
+    vertical-align: middle;
+
+    transform: none;
+
+    transition: none;
+}
+
+
+/*
+   Extra protection against images being
+   stretched or moved vertically
+*/
+
+.male-products-page .product-image {
+    box-sizing: border-box;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    vertical-align: middle;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   FAVORITE BUTTON
+   ========================================================= */
+
+.male-products-page .product-favorite,
+.male-products-page .favorite-btn {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #718096;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+    z-index: 3;
+
+    transition: var(--transition);
+}
+
+.male-products-page .product-favorite:hover,
+.male-products-page .favorite-btn:hover {
+    color: #ef4444;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+   ========================================================= */
+
+.male-products-page .product-card-body,
+.male-products-page .product-info {
+    padding: 17px;
+}
+
+.male-products-page .product-brand {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.male-products-page .product-name {
+    margin: 0 0 9px;
+
+    color: var(--text-color);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.45;
+}
+
+.male-products-page .product-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 10px;
+}
+
+.male-products-page .product-rating .stars {
+    color: #f59e0b;
+
+    font-size: 13px;
+}
+
+.male-products-page .product-rating span {
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+.male-products-page .product-price {
+    margin-bottom: 13px;
+
+    color: var(--primary-color);
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BUY NOW BUTTON
+   ========================================================= */
+
+.male-products-page .product-buy-button,
+.male-products-page .buy-btn {
+    width: 100%;
+    min-height: 42px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--primary-color);
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.male-products-page .product-buy-button:hover,
+.male-products-page .buy-btn:hover {
+    background: var(--primary-dark);
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+   ========================================================= */
+
+.male-products-page .no-products {
+    display: none;
+
+    margin-top: 20px;
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+}
+
+.male-products-page .no-products h3 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+}
+
+.male-products-page .no-products p {
+    margin: 0 0 18px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   THEME DOTS
+   ========================================================= */
+
+.male-products-page .theme-dot {
+    cursor: pointer;
+}
+
+.male-products-page .theme-dot.active {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+   ========================================================= */
+
+.male-products-page .mobile-overlay {
+    display: none;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.male-products-page.dark-mode,
+body.dark-mode.male-products-page {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f1f5f9;
+    --text-light: #94a3b8;
+    --border-color: #334155;
+}
+
+body.dark-mode.male-products-page {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-mode.male-products-page .products-top h1,
+body.dark-mode.male-products-page .product-section-heading h2,
+body.dark-mode.male-products-page .featured-heading h2,
+body.dark-mode.male-products-page .product-name {
+    color: #f1f5f9;
+}
+
+body.dark-mode.male-products-page .product-search input,
+body.dark-mode.male-products-page .product-category-card,
+body.dark-mode.male-products-page .hair-type-card,
+body.dark-mode.male-products-page .concern-card,
+body.dark-mode.male-products-page .product-card,
+body.dark-mode.male-products-page .no-products {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    color: #f1f5f9;
+}
+
+body.dark-mode.male-products-page .hair-type-card strong {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark-mode.male-products-page .hair-type-image {
+    background: #0f172a;
+}
+
+body.dark-mode.male-products-page .product-image-wrap,
+body.dark-mode.male-products-page .product-card > img.product-image {
+    background: #0f172a;
+}
+
+body.dark-mode.male-products-page .product-search input {
+    color: #f1f5f9;
+}
+
+body.dark-mode.male-products-page .product-search input::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode.male-products-page .concern-card span {
+    background: rgba(79, 95, 245, 0.18);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .male-products-page .category-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .male-products-page .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .male-products-page .hair-type-grid,
+    .male-products-page .concern-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .male-products-page .products-page {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .male-products-page .products-top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .male-products-page .product-search {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .male-products-page .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .male-products-page .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .male-products-page .hair-type-grid,
+    .male-products-page .concern-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .male-products-page .male-topbar {
+        width: 100%;
+        margin-left: 0;
+
+        padding: 0 15px;
+    }
+
+    .male-products-page .products-page {
+        margin-left: 0;
+
+        padding:
+            calc(var(--header-height) + 25px)
+            16px
+            45px;
+    }
+
+    .male-products-page .topbar-title {
+        margin-left: 10px;
+    }
+
+    .male-products-page .topbar-title span {
+        display: none;
+    }
+
+    .male-products-page .topbar-title strong {
+        font-size: 13px;
+    }
+
+    .male-products-page .products-top h1 {
+        font-size: 29px;
+    }
+
+    .male-products-page .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .male-products-page .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .male-products-page .hair-type-grid,
+    .male-products-page .concern-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .male-products-page .product-section-heading h2 {
+        font-size: 19px;
+    }
+
+    .male-products-page .product-card > img.product-image {
+        height: 220px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .male-products-page .products-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .male-products-page .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .male-products-page .hair-type-grid,
+    .male-products-page .concern-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .male-products-page .products-top h1 {
+        font-size: 26px;
+    }
+
+    .male-products-page .featured-heading {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+    .male-products-page .product-card > img.product-image {
+        height: 210px;
+    }
+}

@@ -55,3 +55,15 @@ def reels():
 @main.route("/saved-reels")
 def saved_reels():
     return render_template("saved_reel.html")
+ 
+@main.route("/accessories")
+def accessories():
+    return render_template("Accessories.html")
+
+@main.route("/hair-products")
+def hair_products():
+    return render_template("hair_products.html")
+
+@main.route("/male/hair-products")
+def male_hair_products():
+    return render_template("male_products.html")

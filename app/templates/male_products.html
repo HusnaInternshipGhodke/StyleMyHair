@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StyleMyHair | Men's Hair Products</title>
+
+    <!-- ORIGINAL MALE CSS - DO NOT CHANGE -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/male.css') }}"
+    >
+
+    <!-- PRODUCT PAGE CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/male_products.css') }}?v=10"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body data-theme="graphite" class="male-products-page">
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+====================================================== -->
+
+<div
+    class="mobile-overlay"
+    id="mobileOverlay"
+></div>
+
+
+<!-- =====================================================
+     SAME MALE SIDEBAR
+====================================================== -->
+
+<aside
+    class="male-sidebar"
+    id="maleSidebar"
+>
+
+    <div class="sidebar-top">
+
+        <div class="brand">
+
+            <div class="brand-symbol">
+                SM
+            </div>
+
+            <div class="brand-text">
+
+                <strong>StyleMyHair</strong>
+
+                <span>MEN'S STUDIO</span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="mobile-close"
+            id="mobileClose"
+            type="button"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- PROFILE -->
+
+    <div class="sidebar-profile">
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+        <div class="profile-info">
+
+            <strong>My Profile</strong>
+
+            <span>Style Explorer</span>
+
+        </div>
+
+        <button
+            class="profile-arrow"
+            type="button"
+        >
+            →
+        </button>
+
+    </div>
+
+
+    <!-- MAIN NAVIGATION -->
+
+    <nav class="sidebar-navigation">
+
+        <span class="nav-heading">
+            EXPLORE
+        </span>
+
+
+        <a
+            href="{{ url_for('main.male') }}"
+            class="side-link"
+        >
+
+            <span>⌂</span>
+
+            <label>Dashboard</label>
+
+        </a>
+
+
+        <a
+            href="{{ url_for('main.male') }}#stylesSection"
+            class="side-link"
+        >
+
+            <span>✂</span>
+
+            <label>Hairstyles</label>
+
+        </a>
+
+
+        <a
+            href="{{ url_for('main.male') }}#eventSection"
+            class="side-link"
+        >
+
+            <span>⚡</span>
+
+            <label>Event Looks</label>
+
+        </a>
+
+
+        <a
+            href="{{ url_for('main.male') }}#accessoriesSection"
+            class="side-link"
+        >
+
+            <span>◈</span>
+
+            <label>Accessories</label>
+
+        </a>
+
+
+        <!-- ACTIVE HAIR PRODUCTS -->
+
+        <a
+            href="{{ url_for('main.male_hair_products') }}"
+            class="side-link active"
+        >
+
+            <span>◆</span>
+
+            <label>Hair Products</label>
+
+        </a>
+
+
+        <a
+            href="{{ url_for('main.male') }}#favoritesSection"
+            class="side-link"
+        >
+
+            <span>♥</span>
+
+            <label>Favorites</label>
+
+        </a>
+
+
+        <span class="nav-heading second-heading">
+            SERVICES
+        </span>
+
+
+        <button
+            class="side-link"
+            id="salonButton"
+            type="button"
+        >
+
+            <span>✂</span>
+
+            <label>Nearest Salon</label>
+
+        </button>
+
+
+        <button
+            class="side-link"
+            id="hospitalButton"
+            type="button"
+        >
+
+            <span>✚</span>
+
+            <label>Nearest Hospital</label>
+
+        </button>
+
+    </nav>
+
+
+    <!-- THEME -->
+
+    <div class="theme-panel">
+
+        <div class="theme-title">
+
+            <span>THEME</span>
+
+            <small id="themeName">
+                Graphite
+            </small>
+
+        </div>
+
+
+        <div
+            class="theme-grid"
+            id="themeGrid"
+        >
+
+            <button
+                class="theme-dot graphite active"
+                data-theme="graphite"
+                title="Graphite"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot navy"
+                data-theme="navy"
+                title="Navy"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot steel"
+                data-theme="steel"
+                title="Steel"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot ocean"
+                data-theme="ocean"
+                title="Ocean"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot emerald"
+                data-theme="emerald"
+                title="Emerald"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot forest"
+                data-theme="forest"
+                title="Forest"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot burgundy"
+                data-theme="burgundy"
+                title="Burgundy"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot copper"
+                data-theme="copper"
+                title="Copper"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot charcoal"
+                data-theme="charcoal"
+                title="Charcoal"
+                type="button"
+            ></button>
+
+            <button
+                class="theme-dot midnight"
+                data-theme="midnight"
+                title="Midnight"
+                type="button"
+            ></button>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM CONTROLS -->
+
+    <div class="sidebar-bottom">
+
+        <button
+            class="bottom-control"
+            id="modeToggle"
+            type="button"
+        >
+
+            <span id="modeIcon">
+                ☀
+            </span>
+
+            <label id="modeText">
+                Light Mode
+            </label>
+
+        </button>
+
+
+        <button
+            class="bottom-control"
+            id="settingsButton"
+            type="button"
+        >
+
+            <span>⚙</span>
+
+            <label>Settings</label>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main class="male-main male-products-main">
+
+
+    <!-- =================================================
+         SAME MALE TOP BAR
+    ================================================== -->
+
+    <header class="male-topbar">
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            type="button"
+        >
+            ☰
+        </button>
+
+
+        <a
+            href="{{ url_for('main.male') }}"
+            class="back-button"
+        >
+
+            <span>←</span>
+
+            <label>Back</label>
+
+        </a>
+
+
+        <div class="topbar-title">
+
+            <span>MEN'S STYLE STUDIO</span>
+
+            <strong>Hair Products</strong>
+
+        </div>
+
+
+        <div class="topbar-actions">
+
+            <button
+                class="top-icon"
+                id="searchButton"
+                type="button"
+            >
+                ⌕
+            </button>
+
+            <button
+                class="top-profile"
+                id="topProfile"
+                type="button"
+            >
+                👤
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
+
+    <section class="products-page">
+
+        <div class="products-top">
+
+            <div>
+
+                <span class="products-label">
+                    GROOMING
+                </span>
+
+                <h1>
+                    Hair Products
+                </h1>
+
+                <p>
+                    Find the right products for your hair,
+                    grooming routine and styling needs.
+                </p>
+
+            </div>
+
+
+            <div class="product-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search hair products, shampoo, serum, wax..."
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT CATEGORIES
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    Product Categories
+                </h2>
+
+                <button
+                    id="showAllCategories"
+                    type="button"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <button
+                    class="product-category-card active"
+                    data-category="all"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ♡
+                    </div>
+
+                    <strong>All</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="shampoo"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ▣
+                    </div>
+
+                    <strong>Shampoo</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="conditioner"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ▥
+                    </div>
+
+                    <strong>Conditioner</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="serum"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ◇
+                    </div>
+
+                    <strong>Hair Serum</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="oil"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ◉
+                    </div>
+
+                    <strong>Hair Oil</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="mask"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ▰
+                    </div>
+
+                    <strong>Hair Mask</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="styling"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ◆
+                    </div>
+
+                    <strong>Styling</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="leave-in"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ◇
+                    </div>
+
+                    <strong>Leave-in Care</strong>
+
+                </button>
+
+
+                <button
+                    class="product-category-card"
+                    data-category="treatment"
+                    type="button"
+                >
+
+                    <div class="category-icon">
+                        ✚
+                    </div>
+
+                    <strong>Treatments</strong>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HAIR TYPE
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    Match With Your Hair Type
+                </h2>
+
+                <button
+                    id="showAllHairTypes"
+                    type="button"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="hair-type-grid">
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="straight"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/straight-hair.jpg') }}"
+                            alt="Straight hair"
+                        >
+
+                    </div>
+
+                    <strong>Straight</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="wavy"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/wavy-hair.jpg') }}"
+                            alt="Wavy hair"
+                        >
+
+                    </div>
+
+                    <strong>Wavy</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="curly"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/curly-hair.jpg') }}"
+                            alt="Curly hair"
+                        >
+
+                    </div>
+
+                    <strong>Curly</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="dry"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/dry-hair.jpg') }}"
+                            alt="Dry hair"
+                        >
+
+                    </div>
+
+                    <strong>Dry</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="oily"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/oily-hair.jpg') }}"
+                            alt="Oily hair"
+                        >
+
+                    </div>
+
+                    <strong>Oily</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="frizzy"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/frizzy-hair.jpg') }}"
+                            alt="Frizzy hair"
+                        >
+
+                    </div>
+
+                    <strong>Frizzy</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="damaged"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/damaged-hair.jpg') }}"
+                            alt="Damaged hair"
+                        >
+
+                    </div>
+
+                    <strong>Damaged</strong>
+
+                </button>
+
+
+                <!-- ADD YOUR IMAGE HERE -->
+
+                <button
+                    class="hair-type-card"
+                    data-hair-type="thick"
+                    type="button"
+                >
+
+                    <div class="hair-type-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/thick-hair.jpg') }}"
+                            alt="Thick hair"
+                        >
+
+                    </div>
+
+                    <strong>Thick</strong>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HAIR CONCERNS
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    Choose Your Hair Concern
+                </h2>
+
+                <button
+                    id="showAllConcerns"
+                    type="button"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="concern-grid">
+
+
+                <button
+                    class="concern-card"
+                    data-concern="hair-fall"
+                    type="button"
+                >
+                    <span>↗</span>
+                    <strong>Hair Fall</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="dandruff"
+                    type="button"
+                >
+                    <span>✣</span>
+                    <strong>Dandruff</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="dry-hair"
+                    type="button"
+                >
+                    <span>◆</span>
+                    <strong>Dry Hair</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="oily-scalp"
+                    type="button"
+                >
+                    <span>♢</span>
+                    <strong>Oily Scalp</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="frizzy-hair"
+                    type="button"
+                >
+                    <span>〰</span>
+                    <strong>Frizzy Hair</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="damaged-hair"
+                    type="button"
+                >
+                    <span>⌁</span>
+                    <strong>Damaged Hair</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="weak-hair"
+                    type="button"
+                >
+                    <span>♢</span>
+                    <strong>Weak Hair</strong>
+                </button>
+
+
+                <button
+                    class="concern-card"
+                    data-concern="hair-growth"
+                    type="button"
+                >
+                    <span>↗</span>
+                    <strong>Hair Growth</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEATURED PRODUCTS
+        ================================================== -->
+
+        <section class="featured-section">
+
+            <div class="featured-heading">
+
+                <div>
+
+                    <h2>
+                        Featured Products
+                    </h2>
+
+                    <p>
+                        Premium care for your hair
+                    </p>
+
+                </div>
+
+                <button
+                    id="resetProducts"
+                    type="button"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+
+            <div
+                class="products-grid"
+                id="productsGrid"
+            >
+
+                <!-- PRODUCTS ARE LOADED FROM male_products.js -->
+
+            </div>
+
+
+            <div
+                class="no-products"
+                id="noProducts"
+            >
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search or filter.
+                </p>
+
+                <button
+                    id="resetNoProducts"
+                    type="button"
+                >
+                    Reset Filters
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     YOUR EXISTING PRODUCT JS
+====================================================== -->
+
+<script
+    src="{{ url_for('static', filename='js/male_products.js') }}?v=10"
+></script>
+
+
+</body>
+
+</html>

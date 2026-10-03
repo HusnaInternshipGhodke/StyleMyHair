@@ -4,55 +4,52 @@
 
 <head>
 
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="description"
+        content="StyleMyHair Female Style Studio - Discover hairstyles, haircuts, accessories and beauty looks."
+    >
 
-<meta
-    name="description"
-    content="StyleMyHair Female Style Studio - Discover hairstyles, haircuts, accessories and beauty looks."
->
-
-<title>StyleMyHair | Female Style Studio</title>
-
-
-<!-- =====================================================
-     GOOGLE FONT
-====================================================== -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
->
-
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
->
+    <title>StyleMyHair | Female Style Studio</title>
 
 
-<!-- =====================================================
-     FEMALE CSS
-====================================================== -->
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
 
-<link
-    rel="stylesheet"
-    href="{{ url_for('static', filename='css/female.css') }}?v=101"
->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FEMALE CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/female.css') }}?v=101"
+    >
 
 </head>
 
+
 <body class="female-page">
-
-
 
 
 <!-- =====================================================
@@ -212,19 +209,23 @@
         </a>
 
 
+        <!-- ACCESSORIES -->
+
         <a
-            href="#accessories"
+            href="{{ url_for('main.accessories') }}"
             class="sidebar-link"
         >
 
-            <span class="sidebar-icon">◇</span>
-
             <span>
-                Accessories
+                🎀
             </span>
+
+            Accessories
 
         </a>
 
+
+        <!-- OCCASIONAL LOOKS -->
 
         <a
             href="#occasions"
@@ -240,12 +241,16 @@
         </a>
 
 
+        <!-- HAIR PRODUCTS -->
+
         <a
-            href="#products"
+            href="{{ url_for('main.hair_products') }}"
             class="sidebar-link"
         >
 
-            <span class="sidebar-icon">♡</span>
+            <span class="sidebar-icon">
+                ♡
+            </span>
 
             <span>
                 Hair Products
@@ -513,6 +518,7 @@
             Settings
         </a>
 
+
         <a
             href="#help"
             class="sidebar-footer-link"
@@ -624,11 +630,7 @@
     </header>
 
 
-
-
-    <!-- =====================================================
-         PAGE BACK BUTTON
-    ====================================================== -->
+    <!-- PAGE BACK BUTTON -->
 
     <div class="page-back-wrapper">
 
@@ -638,8 +640,15 @@
             id="pageBackButton"
             aria-label="Go back to previous page"
         >
-            <span class="back-arrow">←</span>
-            <span class="back-text">Back</span>
+
+            <span class="back-arrow">
+                ←
+            </span>
+
+            <span class="back-text">
+                Back
+            </span>
+
         </button>
 
     </div>
@@ -650,7 +659,6 @@
     ================================================== -->
 
     <main class="female-main">
-
 
 
         <!-- =================================================
@@ -691,6 +699,11 @@
                 </p>
 
 
+                <!-- =================================================
+                     HERO BUTTONS
+                     HAIR PRODUCTS BUTTON ADDED HERE
+                ================================================== -->
+
                 <div class="hero-buttons">
 
                     <a
@@ -718,6 +731,24 @@
                         Find My Style
 
                     </button>
+
+
+                    <!-- HAIR PRODUCTS BUTTON -->
+
+                    <a
+                        href="{{ url_for('main.hair_products') }}"
+                        class="secondary-button"
+                    >
+
+                        ♡
+
+                        Hair Products
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
 
                 </div>
 
@@ -907,28 +938,57 @@
         <section class="quick-categories">
 
             <a href="#hairstyles">
-                <span>✦</span>
+
+                <span>
+                    ✦
+                </span>
+
                 Styles
+
             </a>
+
 
             <a href="#haircuts">
-                <span>✂</span>
+
+                <span>
+                    ✂
+                </span>
+
                 Cuts
+
             </a>
+
 
             <a href="#accessories">
-                <span>◇</span>
+
+                <span>
+                    ◇
+                </span>
+
                 Accessories
+
             </a>
+
 
             <a href="#occasions">
-                <span>✿</span>
+
+                <span>
+                    ✿
+                </span>
+
                 Occasions
+
             </a>
 
+
             <a href="#products">
-                <span>♡</span>
+
+                <span>
+                    ♡
+                </span>
+
                 Products
+
             </a>
 
         </section>
@@ -986,9 +1046,17 @@
 
             <div class="find-style-decoration">
 
-                <span>✦</span>
-                <span>✿</span>
-                <span>♡</span>
+                <span>
+                    ✦
+                </span>
+
+                <span>
+                    ✿
+                </span>
+
+                <span>
+                    ♡
+                </span>
 
             </div>
 
@@ -2341,6 +2409,7 @@
 
             </div>
 
+
             <p>
                 Discover your style. Make it yours.
             </p>
@@ -2393,7 +2462,9 @@
         class="active"
     >
 
-        <span>⌂</span>
+        <span>
+            ⌂
+        </span>
 
         <small>
             Home
@@ -2404,7 +2475,9 @@
 
     <a href="#hairstyles">
 
-        <span>✦</span>
+        <span>
+            ✦
+        </span>
 
         <small>
             Styles
@@ -2415,7 +2488,9 @@
 
     <a href="#find-style">
 
-        <span>✧</span>
+        <span>
+            ✧
+        </span>
 
         <small>
             Find
@@ -2426,7 +2501,9 @@
 
     <a href="#favorites">
 
-        <span>♡</span>
+        <span>
+            ♡
+        </span>
 
         <small>
             Saved
@@ -2437,7 +2514,9 @@
 
     <a href="#mylooks">
 
-        <span>◉</span>
+        <span>
+            ◉
+        </span>
 
         <small>
             Looks
@@ -2459,10 +2538,6 @@
 
 <!-- =====================================================
      BACK BUTTON FALLBACK
-
-     This is intentionally placed AFTER female.js.
-     If female.js does not already control the button,
-     this guarantees that the button has a working action.
 ====================================================== -->
 
 <script>
@@ -2478,31 +2553,23 @@
         }
 
 
-        pageBackButton.addEventListener("click", function () {
+        pageBackButton.addEventListener(
+            "click",
+            function () {
 
-            /*
-             * If there is browser history,
-             * return to the previous page.
-             */
+                if (window.history.length > 1) {
 
-            if (window.history.length > 1) {
+                    window.history.back();
 
-                window.history.back();
+                    return;
+                }
 
-                return;
+
+                window.location.href =
+                    "{{ url_for('main.home') }}";
+
             }
-
-
-            /*
-             * Fallback:
-             * if this page was opened directly,
-             * return to the StyleMyHair home page.
-             */
-
-            window.location.href =
-                "{{ url_for('main.home') }}";
-
-        });
+        );
 
     });
 

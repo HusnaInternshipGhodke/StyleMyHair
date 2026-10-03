@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="rose">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="StyleMyHair Hair Products - Discover hair care products for your hair type and routine."
+    >
+
+    <title>StyleMyHair | Hair Products</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- EXISTING FEMALE CSS
+         THIS KEEPS THE SAME HEADER + SIDEBAR -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/female.css') }}?v=102"
+    >
+
+
+    <!-- HAIR PRODUCTS CSS -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/hair_products.css') }}?v=1"
+    >
+
+</head>
+
+
+<body class="female-page hair-products-page">
+
+
+<div class="female-background"></div>
+
+<div class="background-orb orb-one"></div>
+<div class="background-orb orb-two"></div>
+
+
+<!-- =====================================================
+     MOBILE SIDEBAR OVERLAY
+====================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+<!-- =====================================================
+     SAME FEMALE SIDEBAR
+====================================================== -->
+
+<aside
+    class="female-sidebar"
+    id="femaleSidebar"
+>
+
+    <!-- LOGO -->
+
+    <a
+        href="{{ url_for('main.female') }}"
+        class="sidebar-logo"
+    >
+
+        <span class="logo-style">
+            Style
+        </span>
+
+        <span class="logo-myhair">
+            MyHair
+        </span>
+
+    </a>
+
+
+    <!-- PROFILE -->
+
+    <div class="sidebar-profile">
+
+        <div class="profile-avatar">
+            ♡
+        </div>
+
+        <div class="profile-text">
+
+            <strong>
+                Style Explorer
+            </strong>
+
+            <span>
+                Female Studio
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-navigation">
+
+        <p class="nav-label">
+            DISCOVER
+        </p>
+
+
+        <!-- HOME -->
+
+        <a
+            href="{{ url_for('main.female') }}"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ⌂
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <!-- HAIR STYLES -->
+
+        <a
+            href="{{ url_for('main.hair_styles') }}"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ✦
+            </span>
+
+            <span>
+                Hair Styles
+            </span>
+
+        </a>
+
+
+        <!-- HAIR CUTTING -->
+
+        <a
+            href="#haircuts"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ✂
+            </span>
+
+            <span>
+                Hair Cutting
+            </span>
+
+        </a>
+
+
+        <!-- ACCESSORIES -->
+
+        <a
+            href="{{ url_for('main.accessories') }}"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ◇
+            </span>
+
+            <span>
+                Accessories
+            </span>
+
+        </a>
+
+
+        <!-- OCCASIONAL -->
+
+        <a
+            href="#occasions"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ✿
+            </span>
+
+            <span>
+                Occasional Looks
+            </span>
+
+        </a>
+
+
+        <!-- HAIR PRODUCTS -->
+
+        <a
+            href="{{ url_for('main.hair_products') }}"
+            class="sidebar-link active"
+        >
+
+            <span class="sidebar-icon">
+                ♡
+            </span>
+
+            <span>
+                Hair Products
+            </span>
+
+        </a>
+
+
+        <p class="nav-label nav-label-space">
+            MY SPACE
+        </p>
+
+
+        <!-- MY LOOKS -->
+
+        <a
+            href="#mylooks"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ◉
+            </span>
+
+            <span>
+                My Looks
+            </span>
+
+        </a>
+
+
+        <!-- FAVORITES -->
+
+        <a
+            href="#favorites"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ♥
+            </span>
+
+            <span>
+                Favorites
+            </span>
+
+        </a>
+
+
+        <!-- SALON -->
+
+        <a
+            href="#salon"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                ⌖
+            </span>
+
+            <span>
+                Nearest Salon
+            </span>
+
+        </a>
+
+
+        <!-- HOSPITAL -->
+
+        <a
+            href="#hospital"
+            class="sidebar-link"
+        >
+
+            <span class="sidebar-icon">
+                +
+            </span>
+
+            <span>
+                Nearest Hospital
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =================================================
+         SAME THEME PANEL
+    ================================================== -->
+
+    <div class="theme-panel">
+
+        <div class="theme-panel-heading">
+
+            <div>
+
+                <span class="theme-small-label">
+                    PERSONALIZE
+                </span>
+
+                <strong>
+                    App Colour
+                </strong>
+
+            </div>
+
+            <span class="palette-icon">
+                ✦
+            </span>
+
+        </div>
+
+
+        <p class="theme-description">
+            Choose a colour that feels like you.
+        </p>
+
+
+        <div
+            class="theme-colors"
+            id="themeColors"
+        >
+
+            <button
+                type="button"
+                class="theme-color active"
+                data-theme="rose"
+                title="Rose"
+                aria-label="Rose theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="lavender"
+                title="Lavender"
+                aria-label="Lavender theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="peach"
+                title="Peach"
+                aria-label="Peach theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="sky"
+                title="Sky Blue"
+                aria-label="Sky blue theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="mint"
+                title="Mint"
+                aria-label="Mint theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="sage"
+                title="Sage"
+                aria-label="Sage theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="butter"
+                title="Butter"
+                aria-label="Butter theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="coral"
+                title="Coral"
+                aria-label="Coral theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="plum"
+                title="Plum"
+                aria-label="Plum theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="ocean"
+                title="Ocean"
+                aria-label="Ocean theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="cocoa"
+                title="Cocoa"
+                aria-label="Cocoa theme"
+            >
+                <span></span>
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-color"
+                data-theme="midnight"
+                title="Midnight"
+                aria-label="Midnight theme"
+            >
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <div class="selected-theme-name">
+
+            <span id="selectedThemeName">
+                Rose
+            </span>
+
+            theme
+
+        </div>
+
+    </div>
+
+
+    <!-- SIDEBAR FOOTER -->
+
+    <div class="sidebar-footer">
+
+        <a
+            href="#settings"
+            class="sidebar-footer-link"
+        >
+            ⚙
+            Settings
+        </a>
+
+        <a
+            href="#help"
+            class="sidebar-footer-link"
+        >
+            ?
+            Help & Support
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN APPLICATION
+====================================================== -->
+
+<div class="female-app">
+
+
+    <!-- =================================================
+         SAME FEMALE HEADER
+    ================================================== -->
+
+    <header class="female-header">
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            type="button"
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- MOBILE LOGO -->
+
+        <a
+            href="{{ url_for('main.female') }}"
+            class="mobile-logo"
+        >
+
+            Style<span>MyHair</span>
+
+        </a>
+
+
+        <!-- HEADER TITLE -->
+
+        <div class="header-title">
+
+            <span>
+                FEMALE STYLE STUDIO
+            </span>
+
+            <h1>
+                Discover your look.
+            </h1>
+
+        </div>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+            <button
+                type="button"
+                class="header-icon-button"
+                id="headerSearchButton"
+                title="Search"
+                aria-label="Search"
+            >
+                ⌕
+            </button>
+
+
+            <button
+                type="button"
+                class="header-icon-button"
+                id="darkModeButton"
+                title="Toggle dark mode"
+                aria-label="Toggle dark mode"
+            >
+                ☼
+            </button>
+
+
+            <button
+                type="button"
+                class="header-profile"
+                title="My Profile"
+                aria-label="My Profile"
+            >
+                ♡
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="page-back-wrapper">
+
+        <button
+            type="button"
+            class="page-back-button"
+            id="pageBackButton"
+            aria-label="Go back"
+        >
+
+            <span class="back-arrow">
+                ←
+            </span>
+
+            <span class="back-text">
+                Back
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         HAIR PRODUCTS MAIN CONTENT
+    ================================================== -->
+
+    <main class="female-main hair-products-main">
+
+
+        <!-- PAGE TITLE -->
+
+        <section class="hair-products-hero">
+
+            <div class="hair-products-title-area">
+
+                <div class="hair-products-icon">
+                    ♡
+                </div>
+
+                <div>
+
+                    <span class="hair-products-eyebrow">
+                        HAIR CARE COLLECTION
+                    </span>
+
+                    <h2>
+                        HAIR PRODUCTS
+                    </h2>
+
+                    <p>
+                        Find products that match your hair type,
+                        routine and style.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="hair-products-search-section">
+
+            <div class="hair-products-search">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search hair products..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="clearProductSearch"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PRODUCT CATEGORIES
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    Product Categories
+                </h2>
+
+                <button
+                    type="button"
+                    class="see-all-button"
+                    id="showAllCategories"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="product-category-grid">
+
+                <button
+                    type="button"
+                    class="product-category-card active"
+                    data-category="all"
+                >
+
+                    <span class="category-symbol">
+                        ♡
+                    </span>
+
+                    <strong>
+                        All
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="shampoo"
+                >
+
+                    <span class="category-symbol">
+                        ♧
+                    </span>
+
+                    <strong>
+                        Shampoo
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="conditioner"
+                >
+
+                    <span class="category-symbol">
+                        ♡
+                    </span>
+
+                    <strong>
+                        Conditioner
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="serum"
+                >
+
+                    <span class="category-symbol">
+                        ✦
+                    </span>
+
+                    <strong>
+                        Hair Serum
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="oil"
+                >
+
+                    <span class="category-symbol">
+                        ◇
+                    </span>
+
+                    <strong>
+                        Hair Oil
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="mask"
+                >
+
+                    <span class="category-symbol">
+                        ✿
+                    </span>
+
+                    <strong>
+                        Hair Mask
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="styling"
+                >
+
+                    <span class="category-symbol">
+                        ✦
+                    </span>
+
+                    <strong>
+                        Styling
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="leave-in"
+                >
+
+                    <span class="category-symbol">
+                        ❀
+                    </span>
+
+                    <strong>
+                        Leave-in Care
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="product-category-card"
+                    data-category="treatment"
+                >
+
+                    <span class="category-symbol">
+                        ✧
+                    </span>
+
+                    <strong>
+                        Treatments
+                    </strong>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HAIR TYPE
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    Match With Your Hair Type
+                </h2>
+
+                <button
+                    type="button"
+                    class="see-all-button"
+                    id="showAllHairTypes"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="hair-type-grid">
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="straight"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/straight.jpg') }}"
+                            alt="Straight hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Straight
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="wavy"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/wavy.jpg') }}"
+                            alt="Wavy hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Wavy
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="curly"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/curly.jpg') }}"
+                            alt="Curly hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Curly
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="dry"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/dry.jpg') }}"
+                            alt="Dry hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Dry
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="oily"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/oily.jpg') }}"
+                            alt="Oily hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Oily
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="frizzy"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/frizzy.jpg') }}"
+                            alt="Frizzy hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Frizzy
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="damaged"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/damaged.jpg') }}"
+                            alt="Damaged hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Damaged
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="hair-type-card"
+                    data-hair="colored"
+                >
+
+                    <div class="hair-type-image">
+                        <img
+                            src="{{ url_for('static', filename='images/hair-products/colored.jpg') }}"
+                            alt="Colored hair"
+                        >
+                    </div>
+
+                    <strong>
+                        Colored
+                    </strong>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEATURED PRODUCTS
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <div>
+
+                    <h2>
+                        Featured Products
+                    </h2>
+
+                    <span
+                        id="productResultCount"
+                        class="product-result-count"
+                    >
+                        Showing all products
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="see-all-button"
+                    id="resetProducts"
+                >
+                    Reset →
+                </button>
+
+            </div>
+
+
+            <div
+                class="products-grid"
+                id="productsGrid"
+            >
+
+                <!-- JS WILL ADD PRODUCTS HERE -->
+
+            </div>
+
+
+            <div
+                class="no-products"
+                id="noProducts"
+            >
+
+                <span>
+                    ♡
+                </span>
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search or choose a different category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BEST FOR YOU
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    Best For You
+                </h2>
+
+            </div>
+
+
+            <div class="best-for-grid">
+
+
+                <!-- DRY -->
+
+                <button
+                    type="button"
+                    class="best-for-card dry-card"
+                    data-hair="dry"
+                >
+
+                    <div>
+
+                        <span>
+                            FOR DRY HAIR
+                        </span>
+
+                        <h3>
+                            Keep your hair
+                            hydrated & healthy.
+                        </h3>
+
+                        <p>
+                            Hydrating shampoo
+                            <br>
+                            Hair mask
+                            <br>
+                            Leave-in conditioner
+                        </p>
+
+                    </div>
+
+                    <span class="best-for-arrow">
+                        Explore →
+                    </span>
+
+                </button>
+
+
+                <!-- CURLY -->
+
+                <button
+                    type="button"
+                    class="best-for-card curly-card"
+                    data-hair="curly"
+                >
+
+                    <div>
+
+                        <span>
+                            FOR CURLY HAIR
+                        </span>
+
+                        <h3>
+                            Define your curls,
+                            naturally.
+                        </h3>
+
+                        <p>
+                            Curl cream
+                            <br>
+                            Conditioner
+                            <br>
+                            Anti-frizz serum
+                        </p>
+
+                    </div>
+
+                    <span class="best-for-arrow">
+                        Explore →
+                    </span>
+
+                </button>
+
+
+                <!-- FRIZZY -->
+
+                <button
+                    type="button"
+                    class="best-for-card frizzy-card"
+                    data-hair="frizzy"
+                >
+
+                    <div>
+
+                        <span>
+                            FOR FRIZZY HAIR
+                        </span>
+
+                        <h3>
+                            Smooth, shiny
+                            & manageable.
+                        </h3>
+
+                        <p>
+                            Hair serum
+                            <br>
+                            Hair oil
+                            <br>
+                            Heat protectant
+                        </p>
+
+                    </div>
+
+                    <span class="best-for-arrow">
+                        Explore →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             YOU MAY ALSO LIKE
+        ================================================== -->
+
+        <section class="product-section">
+
+            <div class="product-section-heading">
+
+                <h2>
+                    ♡ You May Also Like
+                </h2>
+
+            </div>
+
+
+            <div
+                class="products-grid recommendation-grid"
+                id="recommendationGrid"
+            >
+
+                <!-- JS -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="female-footer">
+
+            <div class="footer-logo">
+                Style<span>MyHair</span>
+            </div>
+
+            <p>
+                Discover your style. Make it yours.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="{{ url_for('main.female') }}">
+                    Home
+                </a>
+
+                <a href="{{ url_for('main.hair_styles') }}">
+                    Styles
+                </a>
+
+                <a href="{{ url_for('main.hair_products') }}">
+                    Products
+                </a>
+
+                <a href="#mylooks">
+                    My Looks
+                </a>
+
+                <a href="#favorites">
+                    Favorites
+                </a>
+
+            </div>
+
+            <small>
+                © 2026 StyleMyHair. All rights reserved.
+            </small>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAV
+====================================================== -->
+
+<nav class="mobile-bottom-nav">
+
+    <a
+        href="{{ url_for('main.female') }}"
+        class="active"
+    >
+
+        <span>
+            ⌂
+        </span>
+
+        <small>
+            Home
+        </small>
+
+    </a>
+
+
+    <a
+        href="{{ url_for('main.hair_styles') }}"
+    >
+
+        <span>
+            ✦
+        </span>
+
+        <small>
+            Styles
+        </small>
+
+    </a>
+
+
+    <a
+        href="#hair-products"
+    >
+
+        <span>
+            ✧
+        </span>
+
+        <small>
+            Products
+        </small>
+
+    </a>
+
+
+    <a
+        href="#favorites"
+    >
+
+        <span>
+            ♡
+        </span>
+
+        <small>
+            Saved
+        </small>
+
+    </a>
+
+
+    <a
+        href="#mylooks"
+    >
+
+        <span>
+            ◉
+        </span>
+
+        <small>
+            Looks
+        </small>
+
+    </a>
+
+</nav>
+
+
+<!-- HAIR PRODUCTS JS -->
+
+<script
+    src="{{ url_for('static', filename='js/hair_products.js') }}?v=1"
+></script>
+
+</body>
+
+</html>

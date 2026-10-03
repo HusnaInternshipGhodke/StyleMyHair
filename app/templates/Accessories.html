@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="rose">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleMyHair | Accessories</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/accessories.css') }}?v=1"
+    >
+</head>
+
+<body>
+
+<div class="page-background"></div>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <a href="{{ url_for('main.female') }}" class="logo">
+        <span>Style</span><strong>MyHair</strong>
+        <small>Your Style • Your Hair • Your Way</small>
+    </a>
+
+    <nav>
+
+        <a href="{{ url_for('main.female') }}">
+            <span>⌂</span> Home
+        </a>
+
+        <a href="{{ url_for('main.hair_styles') }}">
+            <span>✦</span> Hair Styles
+        </a>
+
+        <a href="{{ url_for('main.reels') }}">
+            <span>▣</span> Reels
+        </a>
+
+        <a href="{{ url_for('main.saved_reels') }}">
+            <span>🔖</span> Saved Reels
+        </a>
+
+        <a href="{{ url_for('main.female') }}#haircuts">
+            <span>✂</span> Hair Cutting
+        </a>
+
+        <a href="#accessories" class="active">
+            <span>🎀</span> Accessories
+        </a>
+
+        <a href="{{ url_for('main.female') }}#occasions">
+            <span>▦</span> Occasional
+        </a>
+
+        <a href="{{ url_for('main.female') }}#products">
+            <span>♟</span> Hair Products
+        </a>
+
+        <a href="{{ url_for('main.female') }}#mylooks">
+            <span>▣</span> My Looks
+        </a>
+
+        <a href="{{ url_for('main.female') }}#favorites">
+            <span>♥</span> Favorites
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            type="button"
+        >
+            ☰
+        </button>
+
+        <a
+            href="{{ url_for('main.female') }}"
+            class="header-logo"
+        >
+            <span>Style</span><strong>MyHair</strong>
+        </a>
+
+        <div class="global-search">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search hairstyles, accessories, or styles..."
+            >
+
+            <span>›</span>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button
+                type="button"
+                id="darkMode"
+                title="Dark mode"
+            >
+                ☼
+            </button>
+
+            <div class="header-colors">
+
+                <button data-theme="rose"></button>
+                <button data-theme="lavender"></button>
+                <button data-theme="peach"></button>
+                <button data-theme="mint"></button>
+                <button data-theme="sky"></button>
+                <button data-theme="cocoa"></button>
+                <button data-theme="midnight"></button>
+
+            </div>
+
+            <button
+                type="button"
+                class="profile-button"
+                id="profileButton"
+            >
+                ♡
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <!-- TITLE -->
+
+        <section class="page-title">
+
+            <div class="title-icon">
+                🎀
+            </div>
+
+            <div>
+                <h1>ACCESSORIES</h1>
+
+                <p>
+                    Complete your hairstyle with the perfect accessory.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <div class="accessory-search">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="accessorySearch"
+                placeholder="Search accessories..."
+            >
+
+            <button
+                type="button"
+                id="clearSearch"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>Categories</h2>
+
+                <button
+                    type="button"
+                    class="see-all"
+                    id="showAllCategories"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <button
+                    class="category-card"
+                    data-type="bows"
+                >
+                    <span>🎀</span>
+                    <strong>Bows</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="clips"
+                >
+                    <span>◢</span>
+                    <strong>Hair Clips</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="pins"
+                >
+                    <span>⚯</span>
+                    <strong>Hair Pins</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="scrunchies"
+                >
+                    <span>🌸</span>
+                    <strong>Scrunchies</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="headbands"
+                >
+                    <span>◡</span>
+                    <strong>Headbands</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="tiaras"
+                >
+                    <span>♕</span>
+                    <strong>Tiaras</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="bands"
+                >
+                    <span>○</span>
+                    <strong>Hair Bands</strong>
+                </button>
+
+                <button
+                    class="category-card"
+                    data-type="jewellery"
+                >
+                    <span>✿</span>
+                    <strong>Hair Accessories</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MATCH HAIRSTYLE ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>🦋 MATCH WITH YOUR HAIRSTYLE</h2>
+
+                <button
+                    type="button"
+                    class="see-all"
+                    id="showAllHair"
+                >
+                    See All →
+                </button>
+
+            </div>
+
+
+            <div class="hair-match-grid">
+
+                <button
+                    class="hair-match active"
+                    data-hair="long"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-long-layers-1.jpg') }}"
+                        alt="Long Hair"
+                    >
+                    <span>Long Hair</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="short"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-modern-bob-1.jpg') }}"
+                        alt="Short Hair"
+                    >
+                    <span>Short Hair</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="curly"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-defined-curls-1.jpg') }}"
+                        alt="Curly Hair"
+                    >
+                    <span>Curly Hair</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="wavy"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-soft-waves-1.jpg') }}"
+                        alt="Wavy Hair"
+                    >
+                    <span>Wavy Hair</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="straight"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-long-layers-2.jpg') }}"
+                        alt="Straight Hair"
+                    >
+                    <span>Straight Hair</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="braids"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-braids-1.jpg') }}"
+                        alt="Braids"
+                    >
+                    <span>Braids</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="bun"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/female-classic-updo-1.jpg') }}"
+                        alt="Bun"
+                    >
+                    <span>Bun</span>
+                </button>
+
+                <button
+                    class="hair-match"
+                    data-hair="wedding"
+                >
+                    <img
+                        src="{{ url_for('static', filename='images/occasion-wedding.jpg') }}"
+                        alt="Wedding"
+                    >
+                    <span>Wedding</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>✦ Featured Accessories</h2>
+
+            </div>
+
+
+            <div
+                class="featured-grid"
+                id="featuredGrid"
+            >
+
+                <!-- PEARL CLIP -->
+
+                <article
+                    class="accessory-card"
+                    data-name="Pearl Hair Clip"
+                    data-type="clips"
+                    data-hair="long wavy straight"
+                    data-occasion="wedding party occasion"
+                    data-color="white pearl"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/accessory-clips.jpg') }}"
+                            alt="Pearl Hair Clip"
+                        >
+
+                        <button
+                            class="card-favorite"
+                            type="button"
+                            aria-label="Add Pearl Hair Clip to favorites"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Pearl Hair Clip</h3>
+
+                        <p>
+                            Elegant pearl clip for a simple
+                            and classy look.
+                        </p>
+
+                        <small>
+                            Long Hair &nbsp;•&nbsp; Wavy Hair
+                        </small>
+
+                        <div class="card-buttons">
+
+                            <button
+                                type="button"
+                                class="favorite-small"
+                            >
+                                ♡ Favorite
+                            </button>
+
+                            <a
+                                href="https://www.meesho.com/queen-stlye-3-pcs-large-pearl-hair-claw-clip-new-elegant-pearl-hair-cluture/p/8ww5ve"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="try-small"
+                            >
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SATIN SCRUNCHIE -->
+
+                <article
+                    class="accessory-card"
+                    data-name="Satin Scrunchie"
+                    data-type="scrunchies"
+                    data-hair="all"
+                    data-occasion="casual party"
+                    data-color="pink"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/accessory-scrunchies.jpg') }}"
+                            alt="Satin Scrunchie"
+                        >
+
+                        <button
+                            class="card-favorite"
+                            type="button"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Satin Scrunchie</h3>
+
+                        <p>
+                            Soft satin scrunchie that keeps
+                            your hair stylish and safe.
+                        </p>
+
+                        <small>
+                            All Hair Types &nbsp;•&nbsp; Casual
+                        </small>
+
+                        <div class="card-buttons">
+
+                            <button
+                                type="button"
+                                class="favorite-small"
+                            >
+                                ♡ Favorite
+                            </button>
+
+                            <a
+                                href="YOUR_MEESHO_LINK_FOR_SATIN_SCRUNCHIE"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="try-small"
+                            >
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FLORAL HEADBAND -->
+
+                <article
+                    class="accessory-card"
+                    data-name="Floral Headband"
+                    data-type="headbands jewellery"
+                    data-hair="long wavy"
+                    data-occasion="wedding festival"
+                    data-color="pink white"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/accessory-headbands.jpg') }}"
+                            alt="Floral Headband"
+                        >
+
+                        <button
+                            class="card-favorite"
+                            type="button"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Floral Headband</h3>
+
+                        <p>
+                            Perfect for a fresh and feminine look.
+                        </p>
+
+                        <small>
+                            Long Hair &nbsp;•&nbsp; Wavy Hair
+                        </small>
+
+                        <div class="card-buttons">
+
+                            <button
+                                type="button"
+                                class="favorite-small"
+                            >
+                                ♡ Favorite
+                            </button>
+
+                            <a
+                                href="YOUR_MEESHO_LINK_FOR_FLORAL_HEADBAND"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="try-small"
+                            >
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PEARL PINS -->
+
+                <article
+                    class="accessory-card"
+                    data-name="Pearl Hair Pins"
+                    data-type="pins jewellery"
+                    data-hair="all wedding"
+                    data-occasion="wedding"
+                    data-color="gold pearl"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/accessory-jewellery.jpg') }}"
+                            alt="Pearl Hair Pins"
+                        >
+
+                        <button
+                            class="card-favorite"
+                            type="button"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Pearl Hair Pins</h3>
+
+                        <p>
+                            Adds a touch of elegance to any hairstyle.
+                        </p>
+
+                        <small>
+                            All Hair Types &nbsp;•&nbsp; Wedding
+                        </small>
+
+                        <div class="card-buttons">
+
+                            <button
+                                type="button"
+                                class="favorite-small"
+                            >
+                                ♡ Favorite
+                            </button>
+
+                            <a
+                                href="YOUR_MEESHO_LINK_FOR_PEARL_HAIR_PINS"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="try-small"
+                            >
+                                Buy Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+                <div>♡</div>
+                <h3>No accessories found</h3>
+                <p>Try another search or filter.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- MOBILE OVERLAY -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+
+
+<script
+    src="{{ url_for('static', filename='js/accessories.js') }}?v=20"
+></script>
+
+</body>
+</html>
